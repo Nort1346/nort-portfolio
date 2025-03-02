@@ -72,7 +72,7 @@ body {
 
   .glow-text {
     animation: glowTextLight 2s ease-in-out infinite;
-    text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+    text-shadow: 0 0 5px rgba(100, 100, 100, 1);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -107,14 +107,14 @@ body {
   @keyframes glowAnimationLight {
     0% {
       background-position: 200% 0;
-      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+      text-shadow: 0 0 5px rgba(100, 100, 100, 0.8);
     }
     50% {
-      text-shadow: 0 0 10px rgba(100, 100, 100, 0.5);
+      text-shadow: 0 0 10px rgba(100, 100, 100, 0.8);
     }
     100% {
       background-position: 0% 0;
-      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+      text-shadow: 0 0 5px rgba(100, 100, 100, 0.8);
     }
   }
 
@@ -132,13 +132,13 @@ body {
 
   @keyframes glowTextLight {
     0% {
-      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+      text-shadow: 0 0 5px rgba(100, 100, 100, 1);
     }
     50% {
-      text-shadow: 0 0 20 px rgba(100, 100, 100, 0.5);
+      text-shadow: 0 0 10px rgba(100, 100, 100, 1);
     }
     100% {
-      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+      text-shadow: 0 0 5px rgba(100, 100, 100, 1);
     }
   }
 

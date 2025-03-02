@@ -8,8 +8,8 @@ import { Metadata } from "next";
 import { geistSans, jura, lexendDeca } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Nort - Developer",
-  description: "The perfect place to explore my work and get in touch",
+  title: "Nort Developer",
+  description: "The perfect place to explore my work and get in touch"
 };
 
 export default async function LocaleLayout({
