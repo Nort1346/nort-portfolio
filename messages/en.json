@@ -1,0 +1,44 @@
+{
+  "Header": {
+    "greeting": "Hi, I'm Nort",
+    "developer": "Developer"
+  },
+  "About": {
+    "title": "About me",
+    "content": "I'm a passionate and skilled developer who approaches every project with precision and determination. I have experience in languages like JavaScript, Typescript and C#. I’ve created various projects like NortBot discord bot, the game Spears on Google Play, and different websites. I also program for individuals. Always learning, always growing."
+  },
+  "Projects": {
+    "title": "My Projects",
+    "viewProject": "View Project",
+    "projects": {
+      "nortbot": {
+        "title": "NortBot",
+        "content": "NortBot is a versatile Discord bot that offers a variety of features to help you manage your servers and make them more interactive and engaging. This bot provides a wide range of commands, including moderation commands, economy system, 4FUN commands, polls and useful utilities."
+      },
+      "spears": {
+        "title": "Spears",
+        "content": "Spears is a casual tapping game where players throw spears at a spinning circle by tapping the screen, aiming to avoid hitting existing spears. The game features epic levels with varying obstacles and speeds, offering an engaging challenge for players."
+      },
+      "badmintonMatch": {
+        "title": "Badminton Match",
+        "content": "Badminton Match is a comprehensive app for tracking and managing badminton matches. It offers score management, player customization, match history, and speech synthesis for point summaries, all wrapped in multi-language support (English, Polish, German)."
+      },
+      "mystiqo": {
+        "title": "Mystiqo",
+        "content": "A full-stack app for anonymous chats with strangers, built with TypeScript and React."
+      },
+      "northook": {
+        "title": "NortHook",
+        "content": "NortHook is a straightforward web application for managing Discord Webhooks. It offers an intuitive interface to create, preview, and send webhook messages quickly and efficiently, making Discord integrations simple and accessible."
+      }
+    }
+  },
+  "Footer": {
+    "allRightsReserved": "All rights reserved."
+  },
+  "NavBar": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

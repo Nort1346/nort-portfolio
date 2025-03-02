@@ -1,0 +1,44 @@
+{
+  "Header": {
+    "greeting": "Cześć, nazywam się Nort",
+    "developer": "Deweloper"
+  },
+  "About": {
+    "title": "O mnie",
+    "content": "Jestem pasjonatem i doświadczonym deweloperem, który do każdego projektu podchodzi z precyzją i determinacją. Mam doświadczenie w językach takich jak JavaScript, Typescript i C#. Stworzyłem różne projekty, takie jak bot Discord NortBot, gra Spears na Google Play oraz różne strony internetowe. Programuję także dla osób prywatnych. Zawsze się uczę, zawsze rosnę."
+  },
+  "Projects": {
+    "title": "Moje projekty",
+    "viewProject": "Zobacz projekt",
+    "projects": {
+      "nortbot": {
+        "title": "NortBot",
+        "content": "NortBot to wszechstronny bot Discord, który oferuje szereg funkcji do zarządzania serwerami i sprawiania, by były bardziej interaktywne i angażujące. Bot ten oferuje szeroki zakres komend, w tym komendy moderacyjne, system ekonomiczny, komendy 4FUN, ankiety i przydatne narzędzia."
+      },
+      "spears": {
+        "title": "Spears",
+        "content": "Spears to casualowa gra polegająca na rzucaniu oszczepami w kręcący się krąg, unikając trafienia w istniejące oszczepy. Gra oferuje epickie poziomy z różnymi przeszkodami i prędkościami, oferując graczom angażujące wyzwania."
+      },
+      "badmintonMatch": {
+        "title": "Badminton Match",
+        "content": "Badminton Match to kompleksowa aplikacja do śledzenia i zarządzania meczami badmintona. Oferuje zarządzanie wynikami, personalizację graczy, historię meczów oraz syntezę mowy do podsumowań punktów, wszystko to w obsłudze wielu języków (angielski, polski, niemiecki)."
+      },
+      "mystiqo": {
+        "title": "Mystiqo",
+        "content": "Aplikacja full-stack do anonimowych rozmów z obcymi, stworzona z użyciem TypeScript i React."
+      },
+      "northook": {
+        "title": "NortHook",
+        "content": "NortHook to prosta aplikacja webowa do zarządzania webhookami Discorda. Oferuje intuicyjny interfejs do tworzenia, podglądu i wysyłania wiadomości webhooków szybko i efektywnie, ułatwiając integrację z Discordem."
+      }
+    }
+  },
+  "Footer": {
+    "allRightsReserved": "Wszelkie prawa zastrzeżone."
+  },
+  "NavBar": {
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  }
+}

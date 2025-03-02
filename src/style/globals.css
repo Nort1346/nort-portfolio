@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.shadow-bottom {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(210, 210, 210, 1),
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+.shadow-top {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(210, 210, 210, 1),
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .shadow-bottom {
+    background: linear-gradient(
+      to top,
+      rgba(30, 30, 30, 1),
+      rgba(0, 0, 0, 0) 50%
+    );
+  }
+  .shadow-top {
+    background: linear-gradient(
+      to bottom,
+      rgba(30, 30, 30, 1),
+      rgba(0, 0, 0, 0) 70%
+    );
+  }
+}
+
+@layer utilities {
+  .glow {
+    @apply bg-gradient-to-l from-black to-zinc-600;
+    background-size: 200% 200%;
+    animation: glowAnimationLight 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .glow-text {
+    animation: glowTextLight 2s ease-in-out infinite;
+    text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .glow {
+      @apply bg-gradient-to-l from-white to-gray-400;
+      background-size: 200% 200%;
+      animation: glowAnimationDark 2s ease-in-out infinite;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .glow-text {
+      animation: glowTextDark 2s ease-in-out infinite;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @keyframes glowAnimationDark {
+    0% {
+      background-position: 200% 0;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      background-position: 0% 0;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @keyframes glowAnimationLight {
+    0% {
+      background-position: 200% 0;
+      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(100, 100, 100, 0.5);
+    }
+    100% {
+      background-position: 0% 0;
+      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+    }
+  }
+
+  @keyframes glowTextDark {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @keyframes glowTextLight {
+    0% {
+      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20 px rgba(100, 100, 100, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+    }
+  }
+
+  .fancy {
+    --offset: 2px;
+    position: static;
+    display: block;
+  }
+
+  .fancy::before {
+    content: "";
+    background: conic-gradient(transparent 270deg, black, transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1/3;
+    width: 100%;
+    z-index: -2;
+    animation: rotate 3s linear infinite;
+  }
+
+  .fancy::after {
+    content: "";
+    background: inherit;
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    z-index: -2;
+    height: calc(100% - 2 * var(--offset));
+    width: calc(100% - 2 * var(--offset));
+  }
+
+  .fancy div {
+    inset: 0;
+    z-index: 0;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: none;
+    animation: blink 1s step-end infinite;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .fancy::before {
+      background: conic-gradient(transparent 270deg, white, transparent);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+
+    to {
+      transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #121212;
+    border-radius: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #292929;
+    border-radius: 10px;
+    border: 2px solid #121212;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #444;
+  }
+
+  .scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #292929 #121212;
+  }
+}
