@@ -1,11 +1,11 @@
 {
   "Header": {
-    "greeting": "Cześć, nazywam się Nort",
+    "greeting": "Cześć, jestem Nort",
     "developer": "Deweloper"
   },
   "About": {
     "title": "O mnie",
-    "content": "Jestem pasjonatem i doświadczonym deweloperem, który do każdego projektu podchodzi z precyzją i determinacją. Mam doświadczenie w językach takich jak JavaScript, Typescript i C#. Stworzyłem różne projekty, takie jak bot Discord NortBot, gra Spears na Google Play oraz różne strony internetowe. Programuję także dla osób prywatnych. Zawsze się uczę, zawsze rosnę."
+    "content": "Jestem doświadczonym deweloperem, który z zaangażowaniem podchodzi do każdego projektu. Mam doświadczenie w JavaScript, TypeScript i C#, a w swojej karierze stworzyłem takie projekty jak bot Discord NortBot, gra Spears na Google Play oraz różne strony internetowe. Tworzę również projekty dostosowane do potrzeb indywidualnych klientów. Zawsze dążę do rozwoju i nieustannie uczę się nowych rzeczy."
   },
   "Projects": {
     "title": "Moje projekty",
@@ -13,15 +13,15 @@
     "projects": {
       "nortbot": {
         "title": "NortBot",
-        "content": "NortBot to wszechstronny bot Discord, który oferuje szereg funkcji do zarządzania serwerami i sprawiania, by były bardziej interaktywne i angażujące. Bot ten oferuje szeroki zakres komend, w tym komendy moderacyjne, system ekonomiczny, komendy 4FUN, ankiety i przydatne narzędzia."
+        "content": "NortBot to wszechstronny bot Discord, który oferuje szereg funkcji, aby pomóc w zarządzaniu Twoimi serwerami oraz sprawić, że stają się one bardziej interaktywne i angażujące. Bot ten posiada szeroki wachlarz komend, w tym komendy moderacyjne, ekonomia, 4FUN, ankiety oraz przydatne narzędzia."
       },
       "spears": {
         "title": "Spears",
-        "content": "Spears to casualowa gra polegająca na rzucaniu oszczepami w kręcący się krąg, unikając trafienia w istniejące oszczepy. Gra oferuje epickie poziomy z różnymi przeszkodami i prędkościami, oferując graczom angażujące wyzwania."
+        "content": "Spears to casualowa gra polegająca na rzucaniu włóczniami w kręcący się krąg, unikając trafienia w istniejące włócznie. Gra oferuje epickie poziomy z różnymi przeszkodami i prędkościami, oferując graczom satysfakcjonujące wyzwania."
       },
       "badmintonMatch": {
         "title": "Badminton Match",
-        "content": "Badminton Match to kompleksowa aplikacja do śledzenia i zarządzania meczami badmintona. Oferuje zarządzanie wynikami, personalizację graczy, historię meczów oraz syntezę mowy do podsumowań punktów, wszystko to w obsłudze wielu języków (angielski, polski, niemiecki)."
+        "content": "Badminton Match to aplikacja do śledzenia i zarządzania meczami badmintona. Oferuje zarządzanie wynikami, personalizację graczy, historię meczów oraz syntezę mowy do podsumowań punktów, wszystko to w obsłudze wielu języków (angielski, polski, niemiecki)."
       },
       "mystiqo": {
         "title": "Mystiqo",
@@ -32,6 +32,11 @@
         "content": "NortHook to prosta aplikacja webowa do zarządzania webhookami Discorda. Oferuje intuicyjny interfejs do tworzenia, podglądu i wysyłania wiadomości webhooków szybko i efektywnie, ułatwiając integrację z Discordem."
       }
     }
+  },
+  "Contact": {
+    "title": "Skontaktuj się ze mną",
+    "writeMeAnEmail": "Napisz do mnie e-mail",
+    "letsBeSocial": "Bądźmy w kontakcie"
   },
   "Footer": {
     "allRightsReserved": "Wszelkie prawa zastrzeżone."

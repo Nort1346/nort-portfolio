@@ -43,6 +43,14 @@ body {
   );
 }
 
+.rotate {
+  transform: rotateZ(360deg);
+}
+
+.unrotate {
+  transform: rotateZ(0deg);
+}
+
 @media (prefers-color-scheme: dark) {
   .shadow-bottom {
     background: linear-gradient(

@@ -33,6 +33,11 @@
       }
     }
   },
+  "Contact": {
+    "title": "Contact me",
+    "writeMeAnEmail": "Write me an email",
+    "letsBeSocial": "Let's be social"
+  },
   "Footer": {
     "allRightsReserved": "All rights reserved."
   },

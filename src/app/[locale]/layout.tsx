@@ -9,7 +9,21 @@ import { geistSans, jura, lexendDeca } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Nort Developer",
-  description: "The perfect place to explore my work and get in touch"
+  description: "The perfect place to explore my work and get in touch",
+  icons: ["/icons/icon-128.png", "/icons/icon-256.png", "/icons/icon-512.png"],
+  metadataBase: new URL("https://nortdev.vercel.app"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      pl: "/pl",
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Nort Developer",
+    images: "/icons/icon-512.png",
+  },
 };
 
 export default async function LocaleLayout({

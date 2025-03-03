@@ -34,7 +34,7 @@ const Header = () => {
           className="w-48 h-48 rounded-full shadow-lg mx-auto mb-5"
         />
         <h1
-          className={`text-5xl font-extrabold py-0.5 mb-2 glow min-h-[3rem] ${lexendDeca.className}`}
+          className={`text-5xl font-extrabold py-0.5 mb-2 glow min-h-[3.5rem] ${lexendDeca.className}`}
         >
           {name}
           <span className="cursor">|</span>
