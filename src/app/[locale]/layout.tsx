@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Nort Developer",
   description: "The perfect place to explore my work and get in touch",
   icons: ["/icons/icon-128.png", "/icons/icon-256.png", "/icons/icon-512.png"],
-  metadataBase: new URL("https://nortdev.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL as string),
   alternates: {
     canonical: "/",
     languages: {
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Nort Developer",
     images: "/icons/icon-512.png",
+    url: process.env.NEXT_PUBLIC_URL
   },
 };
 

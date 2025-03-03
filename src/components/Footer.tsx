@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap justify-center space-x-6">
             <a
-              href="https://www.linkedin.com/in/myname/"
+              href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-800 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-100 transition-colors"
@@ -28,7 +28,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a
-              href="https://github.com/nort1346"
+              href={process.env.NEXT_PUBLIC_GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-800 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-100 transition-colors"
@@ -36,10 +36,10 @@ const Footer = () => {
               GitHub
             </a>
             <a
-              href="mailto:contact.nortbot@gmail.com"
+              href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
               className="text-zinc-800 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-100 transition-colors"
             >
-              contact.nortbot@gmail.com
+              {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
             </a>
           </div>
         </div>

@@ -7,7 +7,6 @@ import { FaDiscord, FaLinkedin } from "react-icons/fa6";
 
 const Contact = () => {
   const t = useTranslations("Contact");
-  const EMAIL = "contact.nortbot@gmail.com";
   return (
     <section className="relative overflow-hidden mb-10" id="contact">
       <h2 className="text-4xl text-center mb-10 font-extrabold glow-text">
@@ -21,9 +20,9 @@ const Contact = () => {
           <p className="font-bold">{t("writeMeAnEmail")}</p>
           <a
             className={`mt-3 font-bold ${jura.className} glow hover:scale-105 transition-all duration-700`}
-            href={`mailto:${EMAIL}`}
+            href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
           >
-            {EMAIL}
+            {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
           </a>
         </div>
         <div
@@ -44,7 +43,7 @@ const Contact = () => {
               />
             </a>
             <a
-              href="https://discord.com/users/794288711164493864"
+              href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
               className="group"
