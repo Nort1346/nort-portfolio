@@ -43,14 +43,14 @@ const Navbar: React.FC<{ sticky?: boolean }> = ({ sticky = false }) => {
           <div className="space-x-4 flex items-center">
             <Link
               href="#about"
-              className="flex items-center hover:text-gray-500 dark:hover:text-gray-400 transition duration-150 space-x-2"
+              className="flex items-center hover:text-gray-500 dark:hover:text-gray-400 transition duration-150 space-x-2 whitespace-nowrap"
             >
               <FaCircleInfo className="inline sm:hidden" size={30} />
               <span className="font-mono hidden sm:inline">{t("about")}</span>
             </Link>
             <Link
               href="#projects"
-              className="flex items-center hover:text-gray-500 dark:hover:text-gray-400 transition duration-150 space-x-2"
+              className="flex items-center hover:text-gray-500 dark:hover:text-gray-400 transition duration-150 space-x-2 whitespace-nowrap"
             >
               <FaDiagramProject className="inline sm:hidden" size={30} />
               <span className="font-mono hidden sm:inline">
@@ -59,7 +59,7 @@ const Navbar: React.FC<{ sticky?: boolean }> = ({ sticky = false }) => {
             </Link>
             <Link
               href="#contact"
-              className="flex items-center hover:text-gray-500 dark:hover:text-gray-400 transition duration-150 space-x-2"
+              className="flex items-center hover:text-gray-500 dark:hover:text-gray-400 transition duration-150 space-x-2 whitespace-nowrap"
             >
               <FaEnvelope className="inline sm:hidden m-0" size={30} />
               <span className="font-mono hidden sm:inline">{t("contact")}</span>

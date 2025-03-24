@@ -33,15 +33,17 @@ const Header = () => {
           height={2048}
           className="w-48 h-48 rounded-full shadow-lg mx-auto mb-5"
         />
-        <h1
-          className={`text-5xl font-extrabold py-0.5 mb-2 glow min-h-[3.5rem] ${lexendDeca.className}`}
-        >
-          {name}
-          <span className="cursor">|</span>
-        </h1>
-        <p className={`text-2xl font-extrabold ${jura.className}`}>
-          {t("developer")}
-        </p>
+        <div className="flex flex-col items-center">
+          <h1
+            className={`text-center text-5xl w-fit font-extrabold py-0.5 mb-2 glow min-h-[3.5rem] ${lexendDeca.className}`}
+          >
+            {name}
+            <span className="cursor">|</span>
+          </h1>
+          <p className={`text-2xl font-extrabold ${jura.className}`}>
+            {t("developer")}
+          </p>
+        </div>
       </div>
     </header>
   );
