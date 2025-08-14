@@ -33,19 +33,19 @@ const Projects = () => {
             name={t("projects.mystiqo.title")}
             description={t("projects.mystiqo.content")}
             iconUrl={"/assets/mystiqo.png"}
-            projectLink={"http://mystiqo.atwebpages.com/"}
+            projectLink={"http://mystiqo.atwebpages.com"}
           />
           <ProjectTile
             name={t("projects.badmintonMatch.title")}
             description={t("projects.badmintonMatch.content")}
             iconUrl={"/assets/badmintonMatch.png"}
-            projectLink={"https://www.badmintonmatch.site/"}
+            projectLink={"https://badminton.nort.space"}
           />
           <ProjectTile
             name={t("projects.northook.title")}
             description={t("projects.northook.content")}
             iconUrl={"/assets/northook.png"}
-            projectLink={"https://northook.vercel.app"}
+            projectLink={"https://hook.nort.space"}
           />
         </div>
       </div>
