@@ -33,7 +33,7 @@ const Projects = () => {
             name={t("projects.mystiqo.title")}
             description={t("projects.mystiqo.content")}
             iconUrl={"/assets/mystiqo.png"}
-            projectLink={"http://mystiqo.atwebpages.com"}
+            projectLink={"https://mystiqo.nort.space"}
           />
           <ProjectTile
             name={t("projects.badmintonMatch.title")}
