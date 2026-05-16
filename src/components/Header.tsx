@@ -1,13 +1,13 @@
-"use client";
-import { jura, lexendDeca } from "@/lib/fonts";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+'use client';
+import { jura, lexendDeca } from '@/lib/fonts';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
 const Header = () => {
-  const t = useTranslations("Header");
-  const FULL_NAME = t("greeting");
-  const [name, setName] = useState<string>("");
+  const t = useTranslations('Header');
+  const FULL_NAME = t('greeting');
+  const [name, setName] = useState<string>('');
 
   useEffect(() => {
     let index = 0;
@@ -40,9 +40,7 @@ const Header = () => {
             {name}
             <span className="cursor">|</span>
           </h1>
-          <p className={`text-2xl font-extrabold ${jura.className}`}>
-            {t("developer")}
-          </p>
+          <p className={`text-2xl font-extrabold ${jura.className}`}>{t('developer')}</p>
         </div>
       </div>
     </header>

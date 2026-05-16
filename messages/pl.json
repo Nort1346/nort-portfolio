@@ -5,7 +5,7 @@
   },
   "About": {
     "title": "O mnie",
-    "content": "Jestem doświadczonym deweloperem, który z zaangażowaniem podchodzi do każdego projektu. Mam doświadczenie w JavaScript, TypeScript i C#, a w swojej karierze stworzyłem takie projekty jak bot Discord NortBot, gra Spears na Google Play oraz różne strony internetowe. Tworzę również projekty dostosowane do potrzeb indywidualnych klientów. Zawsze dążę do rozwoju i nieustannie uczę się nowych rzeczy."
+    "content": "Jestem developerem z doświadczeniem w TypeScript i C#. Tworzę komercyjne strony internetowe, boty Discord i aplikacje webowe, w tym NortBot i jego ekosystem. Realizuję również projekty freelance dla indywidualnych klientów."
   },
   "Projects": {
     "title": "Moje projekty",
@@ -14,6 +14,10 @@
       "nortbot": {
         "title": "NortBot",
         "content": "NortBot to wszechstronny bot Discord, który oferuje szereg funkcji, aby pomóc w zarządzaniu Twoimi serwerami oraz sprawić, że stają się one bardziej interaktywne i angażujące. Bot ten posiada szeroki wachlarz komend, w tym komendy moderacyjne, ekonomia, 4FUN, ankiety oraz przydatne narzędzia."
+      },
+      "englishflow": {
+        "title": "English Flow - Szkoła językowa",
+        "content": "Komercyjna strona internetowa dla szkoły językowej. Zawiera obsługę dwóch języków (polski/angielski), formularz kontaktowy oraz optymalizację SEO. Zbudowana w Next.js i TypeScript."
       },
       "spears": {
         "title": "Spears",

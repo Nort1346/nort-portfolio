@@ -1,29 +1,29 @@
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { Locales } from "@/types/Locales";
-import "@/style/globals.css";
-import { Metadata } from "next";
-import { geistSans, jura, lexendDeca } from "@/lib/fonts";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { Locales } from '@/types/Locales';
+import '@/style/globals.css';
+import { Metadata } from 'next';
+import { geistSans, jura, lexendDeca } from '@/lib/fonts';
 
 export const metadata: Metadata = {
-  title: "Nort Developer",
-  description: "The perfect place to explore my work and get in touch",
-  icons: ["/icons/icon-128.png", "/icons/icon-256.png", "/icons/icon-512.png"],
+  title: 'Nort Developer',
+  description: 'The perfect place to explore my work and get in touch',
+  icons: ['/icons/icon-128.png', '/icons/icon-256.png', '/icons/icon-512.png'],
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL as string),
   alternates: {
-    canonical: "/",
+    canonical: '/',
     languages: {
-      en: "/en",
-      pl: "/pl",
+      en: '/en',
+      pl: '/pl',
     },
   },
   openGraph: {
-    type: "website",
-    siteName: "Nort Developer",
-    images: "/icons/icon-512.png",
-    url: process.env.NEXT_PUBLIC_URL
+    type: 'website',
+    siteName: 'Nort Developer',
+    images: '/icons/icon-512.png',
+    url: process.env.NEXT_PUBLIC_URL,
   },
 };
 
@@ -43,12 +43,8 @@ export default async function LocaleLayout({
 
   return (
     <html className="scroll-smooth scrollbar" lang={locale}>
-      <body
-        className={`${geistSans.variable} ${jura.variable} ${lexendDeca.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+      <body className={`${geistSans.variable} ${jura.variable} ${lexendDeca.variable} antialiased`}>
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

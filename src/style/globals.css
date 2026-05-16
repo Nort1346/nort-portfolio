@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -26,21 +26,13 @@ body {
 .shadow-bottom {
   position: relative;
   padding: 20px;
-  background: linear-gradient(
-    to top,
-    rgba(210, 210, 210, 1),
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0) 60%);
 }
 
 .shadow-top {
   position: relative;
   padding: 20px;
-  background: linear-gradient(
-    to bottom,
-    rgba(210, 210, 210, 1),
-    rgba(0, 0, 0, 0) 80%
-  );
+  background: linear-gradient(to bottom, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0) 80%);
 }
 
 .rotate {
@@ -53,18 +45,10 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .shadow-bottom {
-    background: linear-gradient(
-      to top,
-      rgba(30, 30, 30, 1),
-      rgba(0, 0, 0, 0) 50%
-    );
+    background: linear-gradient(to top, rgba(30, 30, 30, 1), rgba(0, 0, 0, 0) 50%);
   }
   .shadow-top {
-    background: linear-gradient(
-      to bottom,
-      rgba(30, 30, 30, 1),
-      rgba(0, 0, 0, 0) 70%
-    );
+    background: linear-gradient(to bottom, rgba(30, 30, 30, 1), rgba(0, 0, 0, 0) 70%);
   }
 }
 
@@ -157,7 +141,7 @@ body {
   }
 
   .fancy::before {
-    content: "";
+    content: '';
     background: conic-gradient(transparent 270deg, black, transparent);
     position: absolute;
     top: 50%;
@@ -170,7 +154,7 @@ body {
   }
 
   .fancy::after {
-    content: "";
+    content: '';
     background: inherit;
     border-radius: inherit;
     position: absolute;
