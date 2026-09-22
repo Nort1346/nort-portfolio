@@ -6,8 +6,9 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,16 +24,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+::selection {
+  background: rgba(82, 82, 91, 0.25);
+}
+
+:focus-visible {
+  outline: 2px solid #52525b;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: rgba(161, 161, 170, 0.35);
+  }
+
+  :focus-visible {
+    outline-color: #a1a1aa;
+  }
+}
+
 .shadow-bottom {
   position: relative;
   padding: 20px;
-  background: linear-gradient(to top, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(to top, rgba(210, 210, 210, 0.5), rgba(0, 0, 0, 0) 45%);
 }
 
 .shadow-top {
   position: relative;
   padding: 20px;
-  background: linear-gradient(to bottom, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0) 80%);
+  background: linear-gradient(to bottom, rgba(210, 210, 210, 0.5), rgba(0, 0, 0, 0) 60%);
 }
 
 .rotate {
@@ -45,18 +66,50 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .shadow-bottom {
-    background: linear-gradient(to top, rgba(30, 30, 30, 1), rgba(0, 0, 0, 0) 50%);
+    background: linear-gradient(to top, rgba(30, 30, 30, 0.6), rgba(0, 0, 0, 0) 40%);
   }
   .shadow-top {
-    background: linear-gradient(to bottom, rgba(30, 30, 30, 1), rgba(0, 0, 0, 0) 70%);
+    background: linear-gradient(to bottom, rgba(30, 30, 30, 0.6), rgba(0, 0, 0, 0) 55%);
   }
 }
 
 @layer utilities {
+  /* One-time hero entrance: transform + opacity only, always ends visible. */
+  .rise {
+    animation: riseIn 900ms var(--ease-out-strong) both;
+  }
+
+  @keyframes riseIn {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /*
+   * Header glow: a strong sheen band sweeping right across the text.
+   * One direction with a hold at the end (the loop jump is invisible
+   * because both ends show clean base color) - flow, no pulsing.
+   * The base is deliberately darker than the sheen so the sweep reads
+   * clearly (a white band on near-white text would be invisible).
+   */
   .glow {
-    @apply bg-gradient-to-l from-black to-zinc-600;
-    background-size: 200% 200%;
-    animation: glowAnimationLight 2s ease-in-out infinite;
+    background-image: linear-gradient(
+      100deg,
+      #18181b 0%,
+      #18181b 40%,
+      #ffffff 43%,
+      #ffffff 57%,
+      #18181b 60%,
+      #18181b 100%
+    );
+    background-size: 300% 100%;
+    background-repeat: no-repeat;
+    animation: glowSweep 3s ease-in-out 1s infinite;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -64,49 +117,47 @@ body {
 
   .glow-text {
     animation: glowTextLight 2s ease-in-out infinite;
-    text-shadow: 0 0 5px rgba(100, 100, 100, 1);
   }
 
   @media (prefers-color-scheme: dark) {
     .glow {
-      @apply bg-gradient-to-l from-white to-gray-400;
-      background-size: 200% 200%;
-      animation: glowAnimationDark 2s ease-in-out infinite;
+      background-image: linear-gradient(
+        100deg,
+        #a1a1aa 0%,
+        #a1a1aa 40%,
+        #ffffff 43%,
+        #ffffff 57%,
+        #a1a1aa 60%,
+        #a1a1aa 100%
+      );
+      background-size: 300% 100%;
+      background-repeat: no-repeat;
+      animation: glowSweep 3s ease-in-out 1s infinite;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
     }
     .glow-text {
       animation: glowTextDark 2s ease-in-out infinite;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    .cursor {
+      color: #e4e4e7;
     }
   }
 
-  @keyframes glowAnimationDark {
+  /* Rightward flow: decreasing background-position slides the viewport
+     left across the oversized gradient, so the sheen band enters at the
+     left edge of the text and exits at the right edge. Both loop ends show
+     clean base color, making the reset invisible. */
+  @keyframes glowSweep {
     0% {
-      background-position: 200% 0;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      background-position: 100% 0;
     }
-    50% {
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    60% {
+      background-position: 0% 0;
     }
     100% {
       background-position: 0% 0;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-  }
-
-  @keyframes glowAnimationLight {
-    0% {
-      background-position: 200% 0;
-      text-shadow: 0 0 5px rgba(100, 100, 100, 0.8);
-    }
-    50% {
-      text-shadow: 0 0 10px rgba(100, 100, 100, 0.8);
-    }
-    100% {
-      background-position: 0% 0;
-      text-shadow: 0 0 5px rgba(100, 100, 100, 0.8);
     }
   }
 
@@ -131,6 +182,40 @@ body {
     }
     100% {
       text-shadow: 0 0 5px rgba(100, 100, 100, 1);
+    }
+  }
+
+  /* Gentle scroll-hint float (transform + opacity only). */
+  .scroll-cue {
+    animation: cueFloat 2.4s ease-in-out infinite;
+  }
+
+  @keyframes cueFloat {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translateY(8px);
+      opacity: 1;
+    }
+  }
+
+  /* Soft availability-dot pulse (transform + opacity only). */
+  .pulse-dot {
+    animation: dotPulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes dotPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(0.75);
     }
   }
 
@@ -169,11 +254,17 @@ body {
     z-index: 0;
   }
 
+  /*
+   * Terminal caret. It must live OUTSIDE any background-clip:text element
+   * with a solid color of its own: an opacity-animated descendant gets its
+   * own compositing layer, which drops out of the parent's text clip mask
+   * and renders invisible.
+   */
   .cursor {
     display: inline-block;
-    width: 1px;
-    background-color: none;
-    animation: blink 1s step-end infinite;
+    color: #18181b;
+    transform: translateY(-0.1em);
+    animation: blink 1.06s step-end infinite;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -221,5 +312,17 @@ body {
   .scrollbar {
     scrollbar-width: auto;
     scrollbar-color: #292929 #121212;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise,
+    .glow,
+    .glow-text,
+    .cursor,
+    .scroll-cue,
+    .pulse-dot,
+    .fancy::before {
+      animation: none;
+    }
   }
 }

@@ -43,7 +43,10 @@ export default async function LocaleLayout({
 
   return (
     <html className="scroll-smooth scrollbar" lang={locale}>
-      <body className={`${geistSans.variable} ${jura.variable} ${lexendDeca.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${jura.variable} ${lexendDeca.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

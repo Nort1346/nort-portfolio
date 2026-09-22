@@ -1,7 +1,9 @@
 {
   "Header": {
     "greeting": "Cześć, jestem Nort",
-    "developer": "Deweloper"
+    "developer": "Deweloper",
+    "availability": "Dostępny do projektów freelance",
+    "scrollCue": "Przewiń do sekcji o mnie"
   },
   "About": {
     "title": "O mnie",
@@ -11,29 +13,33 @@
     "title": "Moje projekty",
     "viewProject": "Zobacz projekt",
     "projects": {
+      "lode": {
+        "title": "Lode",
+        "content": "Lode to prosty domowy hub filmów i seriali: znajdź tytuł, wybierz najlepszą wersję i pobierz ją jednym kliknięciem, a potem oglądaj w Jellyfin. Bez skomplikowanej konfiguracji, kolejne serwery medialne w drodze."
+      },
       "nortbot": {
         "title": "NortBot",
-        "content": "NortBot to wszechstronny bot Discord, który oferuje szereg funkcji, aby pomóc w zarządzaniu Twoimi serwerami oraz sprawić, że stają się one bardziej interaktywne i angażujące. Bot ten posiada szeroki wachlarz komend, w tym komendy moderacyjne, ekonomia, 4FUN, ankiety oraz przydatne narzędzia."
+        "content": "Jeden bot do całego serwera Discord: moderacja, ekonomia, ankiety, komendy 4FUN i przydatne narzędzia, dzięki którym Twoja społeczność jest bezpieczna, aktywna i zadowolona."
       },
       "englishflow": {
         "title": "English Flow - Szkoła językowa",
-        "content": "Komercyjna strona internetowa dla szkoły językowej. Zawiera obsługę dwóch języków (polski/angielski), formularz kontaktowy oraz optymalizację SEO. Zbudowana w Next.js i TypeScript."
+        "content": "Dopracowana, dwujęzyczna strona szkoły językowej, która zamienia odwiedzających w kursantów. Wygodny formularz kontaktowy i dopracowane SEO, dzięki któremu trafiają tu nowi klienci."
       },
       "spears": {
         "title": "Spears",
-        "content": "Spears to casualowa gra polegająca na rzucaniu włóczniami w kręcący się krąg, unikając trafienia w istniejące włócznie. Gra oferuje epickie poziomy z różnymi przeszkodami i prędkościami, oferując graczom satysfakcjonujące wyzwania."
+        "content": "Szybka, wciągająca gra na refleks: rzucaj włóczniami w obracające się koło, omijaj wbite włócznie i wspinaj się po coraz trudniejszych poziomach. Łatwa do nauki, trudna do odłożenia."
       },
       "badmintonMatch": {
         "title": "Badminton Match",
-        "content": "Badminton Match to aplikacja do śledzenia i zarządzania meczami badmintona. Oferuje zarządzanie wynikami, personalizację graczy, historię meczów oraz syntezę mowy do podsumowań punktów, wszystko to w obsłudze wielu języków (angielski, polski, niemiecki)."
+        "content": "Twój towarzysz na korcie do badmintona: wyniki na żywo, profile graczy, pełna historia meczów i mówione podsumowania punktów, po angielsku, polsku i niemiecku."
       },
       "mystiqo": {
         "title": "Mystiqo",
-        "content": "Aplikacja full-stack do anonimowych rozmów z obcymi, stworzona z użyciem TypeScript i React."
+        "content": "Poznawaj obcych na anonimowych czatach na żywo. Prywatnie, szybko i zawsze o jedno kliknięcie od nowej rozmowy."
       },
       "northook": {
         "title": "NortHook",
-        "content": "NortHook to prosta aplikacja webowa do zarządzania webhookami Discorda. Oferuje intuicyjny interfejs do tworzenia, podglądu i wysyłania wiadomości webhooków szybko i efektywnie, ułatwiając integrację z Discordem."
+        "content": "Webhooki Discorda bez tarcia: twórz, podglądaj na żywo i wysyłaj wiadomości w kilka sekund. Najszybszy sposób na integrację Discorda z Twoimi projektami."
       }
     }
   },

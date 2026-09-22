@@ -11,11 +11,13 @@ function App() {
     <>
       <Navbar sticky={true} />
       <Header />
-      <About />
-      <Container>
-        <Projects />
-        <Contact />
-      </Container>
+      <main>
+        <About />
+        <Container>
+          <Projects />
+          <Contact />
+        </Container>
+      </main>
       <Footer />
     </>
   );
