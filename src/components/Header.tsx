@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <header className="relative flex min-h-[calc(100dvh-6rem)] w-full flex-col items-center overflow-hidden px-8 sm:px-12 pt-12 shadow-bottom">
-      <div className="z-10 flex w-full flex-1 flex-col justify-center text-center">
+      <div className="z-10 flex w-full flex-1 flex-col justify-center pb-[10vh] text-center">
         <Image
           src="/assets/nort.webp"
           alt="Avatar"
